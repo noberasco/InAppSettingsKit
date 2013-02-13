@@ -42,7 +42,7 @@
 	if (!self.textLabel.text.length) {
 		viewSize =  [self.detailTextLabel superview].frame.size;
 		self.detailTextLabel.frame = CGRectMake(kIASKPaddingLeft + imageOffset, 0, viewSize.width - kIASKPaddingLeft - kIASKPaddingRight - imageOffset, viewSize.height -2);
-	} else if (self.detailTextLabel.textAlignment == NSTextAlignmentLeft) {
+	} else if (self.detailTextLabel.textAlignment == UITextAlignmentLeft) {
 		CGRect valueFrame = self.detailTextLabel.frame;
 		valueFrame.origin.x = labelFrame.origin.x + MAX(kIASKMinLabelWidth - imageOffset, labelWidth) + kIASKSpacing;
 		valueFrame.size.width = self.detailTextLabel.superview.frame.size.width - valueFrame.origin.x - kIASKPaddingRight;
