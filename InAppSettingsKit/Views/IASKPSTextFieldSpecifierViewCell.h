@@ -16,9 +16,11 @@
 
 #import <UIKit/UIKit.h>
 
+#import "IAKTableViewCell.h"
+
 @class IASKTextField;
 
-@interface IASKPSTextFieldSpecifierViewCell : UITableViewCell {
+@interface IASKPSTextFieldSpecifierViewCell : IAKTableViewCell {
     IASKTextField *_textField;
 }
 

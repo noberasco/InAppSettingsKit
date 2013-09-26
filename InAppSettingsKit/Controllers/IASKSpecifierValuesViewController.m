@@ -18,6 +18,7 @@
 #import "IASKSpecifier.h"
 #import "IASKSettingsReader.h"
 #import "IASKSettingsStoreUserDefaults.h"
+#import "IAKTableViewCell.h"
 
 #define kCellValue      @"kCellValue"
 
@@ -212,7 +213,7 @@
     NSArray *titles         = [_currentSpecifier multipleTitles];
 	
     if (!cell) {
-        cell = [[[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:kCellValue] autorelease];
+        cell = [[[IAKTableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:kCellValue] autorelease];
     }
 	
 	if ([indexPath isEqual:[self checkedItem]]) {

@@ -16,7 +16,9 @@
 
 #import <UIKit/UIKit.h>
 
+#import "IAKTableViewCell.h"
 
-@interface IASKPSTitleValueSpecifierViewCell : UITableViewCell
+
+@interface IASKPSTitleValueSpecifierViewCell : IAKTableViewCell
 
 @end

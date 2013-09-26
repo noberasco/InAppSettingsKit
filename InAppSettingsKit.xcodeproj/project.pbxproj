@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D976184517F48B930081157A /* IAKTableViewCell.h in Headers */ = {isa = PBXBuildFile; fileRef = D976184317F48B930081157A /* IAKTableViewCell.h */; };
+		D976184617F48B930081157A /* IAKTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D976184417F48B930081157A /* IAKTableViewCell.m */; };
+		D976184717F48B930081157A /* IAKTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D976184417F48B930081157A /* IAKTableViewCell.m */; };
 		E401BD3C16820A0D00EAF534 /* IASKAppSettingsViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = E42ADAC21682036500295D85 /* IASKAppSettingsViewController.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		E401BD3D16820A1700EAF534 /* IASKSpecifierValuesViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = E42ADAC41682036500295D85 /* IASKSpecifierValuesViewController.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		E401BD3E16820A1C00EAF534 /* IASKAppSettingsWebViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = E42ADAC61682036500295D85 /* IASKAppSettingsWebViewController.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -60,6 +63,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		D976184317F48B930081157A /* IAKTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IAKTableViewCell.h; sourceTree = "<group>"; };
+		D976184417F48B930081157A /* IAKTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IAKTableViewCell.m; sourceTree = "<group>"; };
 		E401BD4A16820BBA00EAF534 /* IASKViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; indentWidth = 4; lastKnownFileType = sourcecode.c.h; path = IASKViewController.h; sourceTree = "<group>"; };
 		E42ADA8F168202D700295D85 /* libInAppSettingsKit.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libInAppSettingsKit.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		E42ADA92168202D700295D85 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -244,6 +249,8 @@
 				E42ADADD1682036500295D85 /* IASKSwitch.m */,
 				E42ADADE1682036500295D85 /* IASKTextField.h */,
 				E42ADADF1682036500295D85 /* IASKTextField.m */,
+				D976184317F48B930081157A /* IAKTableViewCell.h */,
+				D976184417F48B930081157A /* IAKTableViewCell.m */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -268,6 +275,7 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D976184517F48B930081157A /* IAKTableViewCell.h in Headers */,
 				E401BD3C16820A0D00EAF534 /* IASKAppSettingsViewController.h in Headers */,
 				E401BD3D16820A1700EAF534 /* IASKSpecifierValuesViewController.h in Headers */,
 				E401BD3E16820A1C00EAF534 /* IASKAppSettingsWebViewController.h in Headers */,
@@ -390,6 +398,7 @@
 				E4EDC59F16820D9500BD3CA9 /* IASKAppSettingsWebViewController.m in Sources */,
 				E4EDC5A016820D9500BD3CA9 /* IASKSettingsReader.m in Sources */,
 				E4EDC5A116820D9500BD3CA9 /* IASKSpecifier.m in Sources */,
+				D976184617F48B930081157A /* IAKTableViewCell.m in Sources */,
 				E4EDC5A216820D9500BD3CA9 /* IASKSettingsStore.m in Sources */,
 				E4EDC5A316820D9500BD3CA9 /* IASKSettingsStoreUserDefaults.m in Sources */,
 				E4EDC5A416820D9500BD3CA9 /* IASKSettingsStoreFile.m in Sources */,
@@ -406,6 +415,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D976184717F48B930081157A /* IAKTableViewCell.m in Sources */,
 				E42ADAB3168202D700295D85 /* IASSettingsStoreUserDefaultsTests.m in Sources */,
 				E4EDC5AD16821D7300BD3CA9 /* IASKAbstractStoreTests.m in Sources */,
 				E4EDC5AF1682216700BD3CA9 /* IASKFileStoreTests.m in Sources */,
