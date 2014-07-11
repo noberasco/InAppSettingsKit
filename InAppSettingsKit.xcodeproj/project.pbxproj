@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		D976184517F48B930081157A /* IAKTableViewCell.h in Headers */ = {isa = PBXBuildFile; fileRef = D976184317F48B930081157A /* IAKTableViewCell.h */; };
 		D976184617F48B930081157A /* IAKTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D976184417F48B930081157A /* IAKTableViewCell.m */; };
-		D976184717F48B930081157A /* IAKTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D976184417F48B930081157A /* IAKTableViewCell.m */; };
 		E401BD3C16820A0D00EAF534 /* IASKAppSettingsViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = E42ADAC21682036500295D85 /* IASKAppSettingsViewController.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		E401BD3D16820A1700EAF534 /* IASKSpecifierValuesViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = E42ADAC41682036500295D85 /* IASKSpecifierValuesViewController.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		E401BD3E16820A1C00EAF534 /* IASKAppSettingsWebViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = E42ADAC61682036500295D85 /* IASKAppSettingsWebViewController.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -26,12 +25,6 @@
 		E401BD4916820A2D00EAF534 /* IASKTextField.h in Headers */ = {isa = PBXBuildFile; fileRef = E42ADADE1682036500295D85 /* IASKTextField.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		E401BD4B16820BBA00EAF534 /* IASKViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = E401BD4A16820BBA00EAF534 /* IASKViewController.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		E42ADA93168202D700295D85 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E42ADA92168202D700295D85 /* Foundation.framework */; };
-		E42ADAA4168202D700295D85 /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E42ADAA3168202D700295D85 /* SenTestingKit.framework */; };
-		E42ADAA6168202D700295D85 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E42ADAA5168202D700295D85 /* UIKit.framework */; };
-		E42ADAA7168202D700295D85 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E42ADA92168202D700295D85 /* Foundation.framework */; };
-		E42ADAAA168202D700295D85 /* libInAppSettingsKit.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E42ADA8F168202D700295D85 /* libInAppSettingsKit.a */; };
-		E42ADAB0168202D700295D85 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = E42ADAAE168202D700295D85 /* InfoPlist.strings */; };
-		E42ADAB3168202D700295D85 /* IASSettingsStoreUserDefaultsTests.m in Sources */ = {isa = PBXBuildFile; fileRef = E42ADAB2168202D700295D85 /* IASSettingsStoreUserDefaultsTests.m */; };
 		E4EDC59D16820D9500BD3CA9 /* IASKAppSettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E42ADAC31682036500295D85 /* IASKAppSettingsViewController.m */; };
 		E4EDC59E16820D9500BD3CA9 /* IASKSpecifierValuesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E42ADAC51682036500295D85 /* IASKSpecifierValuesViewController.m */; };
 		E4EDC59F16820D9500BD3CA9 /* IASKAppSettingsWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E42ADAC71682036500295D85 /* IASKAppSettingsWebViewController.m */; };
@@ -46,21 +39,7 @@
 		E4EDC5A816820D9500BD3CA9 /* IASKSlider.m in Sources */ = {isa = PBXBuildFile; fileRef = E42ADADB1682036500295D85 /* IASKSlider.m */; };
 		E4EDC5A916820D9500BD3CA9 /* IASKSwitch.m in Sources */ = {isa = PBXBuildFile; fileRef = E42ADADD1682036500295D85 /* IASKSwitch.m */; };
 		E4EDC5AA16820D9500BD3CA9 /* IASKTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = E42ADADF1682036500295D85 /* IASKTextField.m */; };
-		E4EDC5AD16821D7300BD3CA9 /* IASKAbstractStoreTests.m in Sources */ = {isa = PBXBuildFile; fileRef = E4EDC5AC16821D7300BD3CA9 /* IASKAbstractStoreTests.m */; };
-		E4EDC5AF1682216700BD3CA9 /* IASKFileStoreTests.m in Sources */ = {isa = PBXBuildFile; fileRef = E4EDC5AE1682216700BD3CA9 /* IASKFileStoreTests.m */; };
-		E4EDC5B2168227B800BD3CA9 /* IASKSettingsReaderTests.m in Sources */ = {isa = PBXBuildFile; fileRef = E4EDC5B1168227B800BD3CA9 /* IASKSettingsReaderTests.m */; };
-		E4EDC5B416822B6700BD3CA9 /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = E4EDC5B316822B6700BD3CA9 /* Settings.bundle */; };
 /* End PBXBuildFile section */
-
-/* Begin PBXContainerItemProxy section */
-		E42ADAA8168202D700295D85 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = E42ADA87168202D700295D85 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = E42ADA8E168202D700295D85;
-			remoteInfo = InAppSettingsKit;
-		};
-/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		D976184317F48B930081157A /* IAKTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IAKTableViewCell.h; sourceTree = "<group>"; };
@@ -68,7 +47,6 @@
 		E401BD4A16820BBA00EAF534 /* IASKViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; indentWidth = 4; lastKnownFileType = sourcecode.c.h; path = IASKViewController.h; sourceTree = "<group>"; };
 		E42ADA8F168202D700295D85 /* libInAppSettingsKit.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libInAppSettingsKit.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		E42ADA92168202D700295D85 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
-		E42ADAA2168202D700295D85 /* InAppSettingsKitTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = InAppSettingsKitTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E42ADAA3168202D700295D85 /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
 		E42ADAA5168202D700295D85 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
 		E42ADAAD168202D700295D85 /* InAppSettingsKitTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "InAppSettingsKitTests-Info.plist"; sourceTree = "<group>"; };
@@ -121,17 +99,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		E42ADA9E168202D700295D85 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				E42ADAA4168202D700295D85 /* SenTestingKit.framework in Frameworks */,
-				E42ADAA6168202D700295D85 /* UIKit.framework in Frameworks */,
-				E42ADAA7168202D700295D85 /* Foundation.framework in Frameworks */,
-				E42ADAAA168202D700295D85 /* libInAppSettingsKit.a in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -150,7 +117,6 @@
 			isa = PBXGroup;
 			children = (
 				E42ADA8F168202D700295D85 /* libInAppSettingsKit.a */,
-				E42ADAA2168202D700295D85 /* InAppSettingsKitTests.octest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -314,32 +280,14 @@
 			productReference = E42ADA8F168202D700295D85 /* libInAppSettingsKit.a */;
 			productType = "com.apple.product-type.library.static";
 		};
-		E42ADAA1168202D700295D85 /* InAppSettingsKitTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = E42ADAB9168202D700295D85 /* Build configuration list for PBXNativeTarget "InAppSettingsKitTests" */;
-			buildPhases = (
-				E42ADA9D168202D700295D85 /* Sources */,
-				E42ADA9E168202D700295D85 /* Frameworks */,
-				E42ADA9F168202D700295D85 /* Resources */,
-				E42ADAA0168202D700295D85 /* ShellScript */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				E42ADAA9168202D700295D85 /* PBXTargetDependency */,
-			);
-			name = InAppSettingsKitTests;
-			productName = InAppSettingsKitTests;
-			productReference = E42ADAA2168202D700295D85 /* InAppSettingsKitTests.octest */;
-			productType = "com.apple.product-type.bundle";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
 		E42ADA87168202D700295D85 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0460;
+				LastTestingUpgradeCheck = 0510;
+				LastUpgradeCheck = 0510;
 				ORGANIZATIONNAME = InAppSettingsKit;
 			};
 			buildConfigurationList = E42ADA8A168202D700295D85 /* Build configuration list for PBXProject "InAppSettingsKit" */;
@@ -355,38 +303,9 @@
 			projectRoot = "";
 			targets = (
 				E42ADA8E168202D700295D85 /* InAppSettingsKit */,
-				E42ADAA1168202D700295D85 /* InAppSettingsKitTests */,
 			);
 		};
 /* End PBXProject section */
-
-/* Begin PBXResourcesBuildPhase section */
-		E42ADA9F168202D700295D85 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				E42ADAB0168202D700295D85 /* InfoPlist.strings in Resources */,
-				E4EDC5B416822B6700BD3CA9 /* Settings.bundle in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXResourcesBuildPhase section */
-
-/* Begin PBXShellScriptBuildPhase section */
-		E42ADAA0168202D700295D85 /* ShellScript */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "# Run the unit tests in this test bundle.\n\"${SYSTEM_DEVELOPER_DIR}/Tools/RunUnitTests\"\n";
-		};
-/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		E42ADA8B168202D700295D85 /* Sources */ = {
@@ -411,27 +330,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		E42ADA9D168202D700295D85 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				D976184717F48B930081157A /* IAKTableViewCell.m in Sources */,
-				E42ADAB3168202D700295D85 /* IASSettingsStoreUserDefaultsTests.m in Sources */,
-				E4EDC5AD16821D7300BD3CA9 /* IASKAbstractStoreTests.m in Sources */,
-				E4EDC5AF1682216700BD3CA9 /* IASKFileStoreTests.m in Sources */,
-				E4EDC5B2168227B800BD3CA9 /* IASKSettingsReaderTests.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		E42ADAA9168202D700295D85 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = E42ADA8E168202D700295D85 /* InAppSettingsKit */;
-			targetProxy = E42ADAA8168202D700295D85 /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		E42ADAAE168202D700295D85 /* InfoPlist.strings */ = {
@@ -445,54 +344,6 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
-		D964F46816CB9A3100465AC3 /* Release_armv6 */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = E42ADAC01682034500295D85 /* Project.xcconfig */;
-			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
-				CLANG_CXX_LIBRARY = "libc++";
-				CLANG_WARN_CONSTANT_CONVERSION = YES;
-				CLANG_WARN_EMPTY_BODY = YES;
-				CLANG_WARN_ENUM_CONVERSION = YES;
-				CLANG_WARN_INT_CONVERSION = YES;
-				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				COPY_PHASE_STRIP = YES;
-				GCC_C_LANGUAGE_STANDARD = gnu99;
-				GCC_WARN_ABOUT_RETURN_TYPE = YES;
-				GCC_WARN_UNINITIALIZED_AUTOS = YES;
-				GCC_WARN_UNUSED_VARIABLE = YES;
-				SDKROOT = iphoneos;
-				VALIDATE_PRODUCT = YES;
-			};
-			name = Release_armv6;
-		};
-		D964F46916CB9A3100465AC3 /* Release_armv6 */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = E42ADABF1682034500295D85 /* Library-Release.xcconfig */;
-			buildSettings = {
-				ARCHS = armv6;
-				DSTROOT = /tmp/InAppSettingsKit.dst;
-				OTHER_LDFLAGS = "-ObjC";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SKIP_INSTALL = YES;
-				VALID_ARCHS = armv6;
-			};
-			name = Release_armv6;
-		};
-		D964F46A16CB9A3100465AC3 /* Release_armv6 */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				FRAMEWORK_SEARCH_PATHS = (
-					"\"$(SDKROOT)/Developer/Library/Frameworks\"",
-					"\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"",
-				);
-				INFOPLIST_FILE = "InAppSettingsKitTests/InAppSettingsKitTests-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				WRAPPER_EXTENSION = octest;
-			};
-			name = Release_armv6;
-		};
 		E42ADAB4168202D700295D85 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = E42ADAC01682034500295D85 /* Project.xcconfig */;
@@ -517,7 +368,10 @@
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1.1;
+				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
+				VALID_ARCHS = "arm64 armv7 armv7s";
 			};
 			name = Debug;
 		};
@@ -538,8 +392,10 @@
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1.1;
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
+				VALID_ARCHS = "arm64 armv7 armv7s";
 			};
 			name = Release;
 		};
@@ -552,7 +408,7 @@
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
-				VALID_ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				VALID_ARCHS = "arm64 armv7 armv7s";
 			};
 			name = Debug;
 		};
@@ -564,33 +420,7 @@
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
-				VALID_ARCHS = "$(ARCHS_STANDARD_32_BIT)";
-			};
-			name = Release;
-		};
-		E42ADABA168202D700295D85 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				FRAMEWORK_SEARCH_PATHS = (
-					"\"$(SDKROOT)/Developer/Library/Frameworks\"",
-					"\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"",
-				);
-				INFOPLIST_FILE = "InAppSettingsKitTests/InAppSettingsKitTests-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				WRAPPER_EXTENSION = octest;
-			};
-			name = Debug;
-		};
-		E42ADABB168202D700295D85 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				FRAMEWORK_SEARCH_PATHS = (
-					"\"$(SDKROOT)/Developer/Library/Frameworks\"",
-					"\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"",
-				);
-				INFOPLIST_FILE = "InAppSettingsKitTests/InAppSettingsKitTests-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				WRAPPER_EXTENSION = octest;
+				VALID_ARCHS = "arm64 armv7 armv7s";
 			};
 			name = Release;
 		};
@@ -602,7 +432,6 @@
 			buildConfigurations = (
 				E42ADAB4168202D700295D85 /* Debug */,
 				E42ADAB5168202D700295D85 /* Release */,
-				D964F46816CB9A3100465AC3 /* Release_armv6 */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -612,17 +441,6 @@
 			buildConfigurations = (
 				E42ADAB7168202D700295D85 /* Debug */,
 				E42ADAB8168202D700295D85 /* Release */,
-				D964F46916CB9A3100465AC3 /* Release_armv6 */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		E42ADAB9168202D700295D85 /* Build configuration list for PBXNativeTarget "InAppSettingsKitTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				E42ADABA168202D700295D85 /* Debug */,
-				E42ADABB168202D700295D85 /* Release */,
-				D964F46A16CB9A3100465AC3 /* Release_armv6 */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

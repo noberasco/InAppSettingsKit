@@ -172,7 +172,7 @@
     if ((title = [self tableView:tableView titleForHeaderInSection:section])) {
         CGSize size = [title sizeWithFont:[UIFont boldSystemFontOfSize:[UIFont labelFontSize]]
                         constrainedToSize:CGSizeMake(tableView.frame.size.width - 2*kIASKHorizontalPaddingGroupTitles, INFINITY)
-                            lineBreakMode:UILineBreakModeWordWrap];
+                            lineBreakMode:NSLineBreakByWordWrapping];
         return size.height+kIASKVerticalPaddingGroupTitles;
     }
     return 0;
@@ -202,7 +202,7 @@
     if ((title = [self tableView:tableView titleForFooterInSection:section])) {
         CGSize size = [title sizeWithFont:[UIFont boldSystemFontOfSize:[UIFont labelFontSize]]
                         constrainedToSize:CGSizeMake(tableView.frame.size.width - 2*kIASKHorizontalPaddingGroupTitles, INFINITY)
-                            lineBreakMode:UILineBreakModeWordWrap];
+                            lineBreakMode:NSLineBreakByWordWrapping];
         return size.height+kIASKVerticalPaddingGroupTitles;
     }
     return 0;

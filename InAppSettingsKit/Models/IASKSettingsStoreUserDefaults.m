@@ -54,7 +54,7 @@
     [self.defaults setDouble:value forKey:key];
 }
 
-- (void)setInteger:(int)value forKey:(NSString*)key {
+- (void)setInteger:(NSInteger)value forKey:(NSString*)key {
     [self.defaults setInteger:value forKey:key];
 }
 
@@ -74,7 +74,7 @@
     return [self.defaults doubleForKey:key];
 }
 
-- (int)integerForKey:(NSString*)key {
+- (NSInteger)integerForKey:(NSString*)key {
     return [self.defaults integerForKey:key];
 }
 
