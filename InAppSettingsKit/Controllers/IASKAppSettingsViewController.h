@@ -97,4 +97,6 @@
 - (void)synchronizeSettings;
 - (void)dismiss:(id)sender;
 - (void)setHiddenKeys:(NSSet*)hiddenKeys animated:(BOOL)animated;
+- (UITableViewCell*)newCellForIdentifier:(NSString*)identifier;
+
 @end
