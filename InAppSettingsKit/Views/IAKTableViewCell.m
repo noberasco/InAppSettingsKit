@@ -16,11 +16,9 @@
 - (id)initWithFrame:(CGRect)frame {
   self = [super initWithFrame:frame];
   
-#ifdef __IPHONE_7_0
   if (IOS_VERSION >= 7)
     if (self != nil)
       self.selectionStyle = UITableViewCellSelectionStyleBlue;
-#endif
   
   return self;
 }
@@ -28,11 +26,9 @@
 - (id)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier {
   self = [super initWithStyle:style reuseIdentifier:reuseIdentifier];
   
-#ifdef __IPHONE_7_0
   if (IOS_VERSION >= 7)
     if (self != nil)
       self.selectionStyle = UITableViewCellSelectionStyleBlue;
-#endif
   
   return self;
 }
@@ -40,12 +36,10 @@
 - (id)initWithCoder:(NSCoder *)aDecoder {
   self = [super initWithCoder:aDecoder];
   
-#ifdef __IPHONE_7_0
   if (IOS_VERSION >= 7)
     if (self != nil)
       if (self.selectionStyle == UITableViewCellSelectionStyleBlue)
         self.selectionStyle = UITableViewCellSelectionStyleBlue;
-#endif
   
   return self;
 }
@@ -53,7 +47,6 @@
 - (void)setSelectionStyle:(UITableViewCellSelectionStyle)selectionStyle {
   [super setSelectionStyle:selectionStyle];
   
-#ifdef __IPHONE_7_0
   if (IOS_VERSION >= 7)
     switch (selectionStyle) {
       case UITableViewCellSelectionStyleBlue: {
@@ -72,7 +65,6 @@
         break;
       }
     }
-#endif
 }
 
 @end
