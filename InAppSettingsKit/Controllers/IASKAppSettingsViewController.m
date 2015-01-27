@@ -26,6 +26,7 @@
 #import "IASKSpecifierValuesViewController.h"
 #import "IASKTextField.h"
 #import "IASKMultipleValueSelection.h"
+#import "IAKTableViewCell.h"
 
 #if !__has_feature(objc_arc)
 #error "IASK needs ARC"
@@ -41,14 +42,11 @@ static NSString *kIASKCredits = @"Powered by InAppSettingsKit"; // Leave this as
 CGRect IASKCGRectSwap(CGRect rect);
 
 @interface IASKAppSettingsViewController () {
-    IASKSettingsReader		*_settingsReader;
     id<IASKSettingsStore>  _settingsStore;
     
     id                      _currentFirstResponder;
-    __weak UIViewController *_currentChildViewController;
     BOOL _reloadDisabled;
 	/// The selected index for every group (in case it's a radio group).
-	NSArray *_selections;
 }
 
 @property (nonatomic, strong) id currentFirstResponder;
@@ -170,7 +168,11 @@ CGRect IASKCGRectSwap(CGRect rect);
 }
 
 - (void)viewWillAppear:(BOOL)animated {
-	// if there's something selected, the value might have changed
+  if ([self.delegate respondsToSelector:@selector(settingsViewController:backgroundViewForableView:)]) {
+    self.tableView.backgroundView = [self.delegate settingsViewController:self backgroundViewForableView:self.tableView];
+  }
+
+  // if there's something selected, the value might have changed
 	// so reload that row
 	NSIndexPath *selectedIndexPath = [self.tableView indexPathForSelectedRow];
 	if(selectedIndexPath) {
@@ -415,6 +417,8 @@ CGRect IASKCGRectSwap(CGRect rect);
 	return 44;
 }
 
+
+
 - (NSString *)tableView:(UITableView*)tableView titleForHeaderInSection:(NSInteger)section {
     NSString *header = [self.settingsReader titleForSection:section];
 	if (0 == header.length) {
@@ -459,6 +463,31 @@ CGRect IASKCGRectSwap(CGRect rect);
 	}
 }
 
+- (UIView *)tableView:(UITableView*)tableView viewForFooterInSection:(NSInteger)section {
+    if ([self.delegate respondsToSelector:@selector(settingsViewController:tableView:viewForFooterForSection:)]) {
+        return [self.delegate settingsViewController:self tableView:tableView viewForFooterForSection:section];
+    } else {
+        return nil;
+    }
+}
+
+- (CGFloat)tableView:(UITableView*)tableView heightForFooterInSection:(NSInteger)section {
+    if ([self tableView:tableView viewForFooterInSection:section] && [self.delegate respondsToSelector:@selector(settingsViewController:tableView:heightForFooterForSection:)]) {
+        CGFloat result;
+        if ((result = [self.delegate settingsViewController:self tableView:tableView heightForFooterForSection:section])) {
+            return result;
+        }
+        
+    }
+    NSString *title;
+    if ((title = [self tableView:tableView titleForFooterInSection:section])) {
+        CGSize size = [title sizeWithFont:[UIFont boldSystemFontOfSize:[UIFont labelFontSize]]
+                        constrainedToSize:CGSizeMake(tableView.frame.size.width - 2*kIASKHorizontalPaddingGroupTitles, INFINITY)
+                            lineBreakMode:NSLineBreakByWordWrapping];
+        return size.height+kIASKVerticalPaddingGroupTitles;
+    }
+    return 0;
+}
 
 - (UITableViewCell*)tableView:(UITableView *)tableView cellForSpecifier:(IASKSpecifier*)specifier {
 
@@ -469,13 +498,13 @@ CGRect IASKCGRectSwap(CGRect rect);
 	}
 	UITableViewCellStyle style = (specifier.textAlignment == NSTextAlignmentLeft || specifier.subtitle.length) ? UITableViewCellStyleSubtitle : UITableViewCellStyleDefault;
 	if ([identifier hasPrefix:kIASKPSToggleSwitchSpecifier]) {
-		cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:kIASKPSToggleSwitchSpecifier];
+		cell = [[IAKTableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:kIASKPSToggleSwitchSpecifier];
 		cell.accessoryView = [[IASKSwitch alloc] initWithFrame:CGRectMake(0, 0, 79, 27)];
 		[((IASKSwitch*)cell.accessoryView) addTarget:self action:@selector(toggledValue:) forControlEvents:UIControlEventValueChanged];
 		cell.selectionStyle = UITableViewCellSelectionStyleNone;
 	}
 	else if ([identifier hasPrefix:kIASKPSMultiValueSpecifier] || [identifier hasPrefix:kIASKPSTitleValueSpecifier]) {
-		cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleValue1 reuseIdentifier:identifier];
+		cell = [[IAKTableViewCell alloc] initWithStyle:UITableViewCellStyleValue1 reuseIdentifier:identifier];
 		cell.accessoryType = [identifier hasPrefix:kIASKPSMultiValueSpecifier] ? UITableViewCellAccessoryDisclosureIndicator : UITableViewCellAccessoryNone;
 	}
 	else if ([identifier hasPrefix:kIASKPSTextFieldSpecifier]) {
@@ -485,13 +514,13 @@ CGRect IASKCGRectSwap(CGRect rect);
 	else if ([identifier hasPrefix:kIASKPSSliderSpecifier]) {
         cell = [[IASKPSSliderSpecifierViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:kIASKPSSliderSpecifier];
 	} else if ([identifier hasPrefix:kIASKPSChildPaneSpecifier]) {
-		cell = [[UITableViewCell alloc] initWithStyle:style reuseIdentifier:identifier];
+		cell = [[IAKTableViewCell alloc] initWithStyle:style reuseIdentifier:identifier];
 		cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
 	} else if ([identifier isEqualToString:kIASKMailComposeSpecifier]) {
-		cell = [[UITableViewCell alloc] initWithStyle:style reuseIdentifier:identifier];
+		cell = [[IAKTableViewCell alloc] initWithStyle:style reuseIdentifier:identifier];
 		[cell setAccessoryType:UITableViewCellAccessoryDisclosureIndicator];
 	} else {
-		cell = [[UITableViewCell alloc] initWithStyle:style reuseIdentifier:identifier];
+		cell = [[IAKTableViewCell alloc] initWithStyle:style reuseIdentifier:identifier];
 
 		if ([identifier isEqualToString:kIASKOpenURLSpecifier]) {
 			cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
@@ -604,10 +633,10 @@ CGRect IASKCGRectSwap(CGRect rect);
 		NSString *value = [self.settingsStore objectForKey:specifier.key];
 		cell.textLabel.text = [value isKindOfClass:[NSString class]] ? [self.settingsReader titleForStringId:value] : specifier.title;
 		cell.detailTextLabel.text = specifier.subtitle;
-		IASK_IF_IOS7_OR_GREATER
-		(if (specifier.textAlignment != NSTextAlignmentLeft) {
-			cell.textLabel.textColor = tableView.tintColor;
-		});
+//		IASK_IF_IOS7_OR_GREATER
+//		(if (specifier.textAlignment != NSTextAlignmentLeft) {
+//			cell.textLabel.textColor = tableView.tintColor;
+//		});
 		cell.textLabel.textAlignment = specifier.textAlignment;
 		cell.accessoryType = (specifier.textAlignment == NSTextAlignmentLeft) ? UITableViewCellAccessoryDisclosureIndicator : UITableViewCellAccessoryNone;
 	} else if ([specifier.type isEqualToString:kIASKPSRadioGroupSpecifier]) {
@@ -657,6 +686,7 @@ CGRect IASKCGRectSwap(CGRect rect);
         [targetViewController setCurrentSpecifier:specifier];
         targetViewController.settingsReader = self.settingsReader;
         targetViewController.settingsStore = self.settingsStore;
+        targetViewController.delegate = self.delegate;
 		IASK_IF_IOS7_OR_GREATER(targetViewController.view.tintColor = self.view.tintColor;)
         _currentChildViewController = targetViewController;
         [[self navigationController] pushViewController:targetViewController animated:YES];

@@ -98,6 +98,8 @@
 	}
 }
 
+//#warning da rivedere
+
 - (NSArray*)privacySettingsSpecifiers {
 	NSMutableDictionary *dict = [@{kIASKTitle: NSLocalizedStringFromTable(@"Privacy", @"IASKLocalizable", @"iOS 8+ Privacy cell: title"),
 								   kIASKKey: @"IASKPrivacySettingsCellKey",

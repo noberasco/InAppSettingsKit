@@ -16,9 +16,11 @@
 
 #import <UIKit/UIKit.h>
 
+#import "IAKTableViewCell.h"
+
 @class IASKSlider;
 
-@interface IASKPSSliderSpecifierViewCell : UITableViewCell
+@interface IASKPSSliderSpecifierViewCell : IAKTableViewCell
 
 @property (nonatomic, strong) IASKSlider *slider;
 @property (nonatomic, strong) UIImageView *minImage;

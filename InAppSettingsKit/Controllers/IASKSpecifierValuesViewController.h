@@ -17,17 +17,23 @@
 #import <UIKit/UIKit.h>
 #import "IASKSettingsStore.h"
 #import "IASKViewController.h"
+#import "IASKAppSettingsViewController.h"
+
 @class IASKSpecifier;
 @class IASKSettingsReader;
+@class IASKMultipleValueSelection;
 
 @interface IASKSpecifierValuesViewController : UIViewController<IASKViewController,UITableViewDelegate,UITableViewDataSource> {
     UITableView				*_tableView;
     
     IASKSpecifier			*_currentSpecifier;
 	IASKSettingsReader		*_settingsReader;
+  __unsafe_unretained id<IASKSettingsDelegate>  _delegate;
 }
 
 @property (nonatomic, retain) UITableView *tableView;
 @property (nonatomic, retain) IASKSpecifier *currentSpecifier;
+@property (nonatomic, assign) id delegate;
+@property (nonatomic, strong) IASKMultipleValueSelection *selection;
 
 @end

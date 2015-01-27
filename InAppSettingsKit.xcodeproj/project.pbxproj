@@ -12,6 +12,10 @@
 		AA627D2819F67B7C0079AAE8 /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AA627D2719F67B7C0079AAE8 /* MessageUI.framework */; };
 		AA627D2919F67B8E0079AAE8 /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AA627D2719F67B7C0079AAE8 /* MessageUI.framework */; };
 		AA627D3B19F695F30079AAE8 /* IASKLocalizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = AA627D2B19F695F30079AAE8 /* IASKLocalizable.strings */; };
+		D953C2E11A77EA1400E08E4A /* IASKPSTitleValueSpecifierViewCell.h in Headers */ = {isa = PBXBuildFile; fileRef = D953C2DF1A77EA1400E08E4A /* IASKPSTitleValueSpecifierViewCell.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		D953C2E21A77EA1400E08E4A /* IASKPSTitleValueSpecifierViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D953C2E01A77EA1400E08E4A /* IASKPSTitleValueSpecifierViewCell.m */; };
+		D953C2E51A77EA1E00E08E4A /* IAKTableViewCell.h in Headers */ = {isa = PBXBuildFile; fileRef = D953C2E31A77EA1E00E08E4A /* IAKTableViewCell.h */; };
+		D953C2E61A77EA1E00E08E4A /* IAKTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D953C2E41A77EA1E00E08E4A /* IAKTableViewCell.m */; };
 		E401BD3C16820A0D00EAF534 /* IASKAppSettingsViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = E42ADAC21682036500295D85 /* IASKAppSettingsViewController.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		E401BD3D16820A1700EAF534 /* IASKSpecifierValuesViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = E42ADAC41682036500295D85 /* IASKSpecifierValuesViewController.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		E401BD3E16820A1C00EAF534 /* IASKAppSettingsWebViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = E42ADAC61682036500295D85 /* IASKAppSettingsWebViewController.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -82,6 +86,10 @@
 		AA627D3A19F695F30079AAE8 /* tr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = tr; path = tr.lproj/IASKLocalizable.strings; sourceTree = "<group>"; };
 		AA627D6E19F69A7F0079AAE8 /* InAppSettingsKit.podspec.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = InAppSettingsKit.podspec.json; sourceTree = "<group>"; };
 		AA627D6F19F69A7F0079AAE8 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		D953C2DF1A77EA1400E08E4A /* IASKPSTitleValueSpecifierViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IASKPSTitleValueSpecifierViewCell.h; sourceTree = "<group>"; };
+		D953C2E01A77EA1400E08E4A /* IASKPSTitleValueSpecifierViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IASKPSTitleValueSpecifierViewCell.m; sourceTree = "<group>"; };
+		D953C2E31A77EA1E00E08E4A /* IAKTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IAKTableViewCell.h; sourceTree = "<group>"; };
+		D953C2E41A77EA1E00E08E4A /* IAKTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IAKTableViewCell.m; sourceTree = "<group>"; };
 		E401BD4A16820BBA00EAF534 /* IASKViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; indentWidth = 4; lastKnownFileType = sourcecode.c.h; path = IASKViewController.h; sourceTree = "<group>"; };
 		E42ADA8F168202D700295D85 /* libInAppSettingsKit.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libInAppSettingsKit.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		E42ADA92168202D700295D85 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -281,12 +289,16 @@
 				E42ADAD51682036500295D85 /* IASKPSSliderSpecifierViewCell.m */,
 				E42ADAD61682036500295D85 /* IASKPSTextFieldSpecifierViewCell.h */,
 				E42ADAD71682036500295D85 /* IASKPSTextFieldSpecifierViewCell.m */,
+				D953C2DF1A77EA1400E08E4A /* IASKPSTitleValueSpecifierViewCell.h */,
+				D953C2E01A77EA1400E08E4A /* IASKPSTitleValueSpecifierViewCell.m */,
 				E42ADADA1682036500295D85 /* IASKSlider.h */,
 				E42ADADB1682036500295D85 /* IASKSlider.m */,
 				E42ADADC1682036500295D85 /* IASKSwitch.h */,
 				E42ADADD1682036500295D85 /* IASKSwitch.m */,
 				E42ADADE1682036500295D85 /* IASKTextField.h */,
 				E42ADADF1682036500295D85 /* IASKTextField.m */,
+				D953C2E31A77EA1E00E08E4A /* IAKTableViewCell.h */,
+				D953C2E41A77EA1E00E08E4A /* IAKTableViewCell.m */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -374,6 +386,7 @@
 				E401BD4116820A2400EAF534 /* IASKSettingsStore.h in Headers */,
 				E401BD4216820A2400EAF534 /* IASKSettingsStoreUserDefaults.h in Headers */,
 				E401BD4316820A2400EAF534 /* IASKSettingsStoreFile.h in Headers */,
+				D953C2E11A77EA1400E08E4A /* IASKPSTitleValueSpecifierViewCell.h in Headers */,
 				E401BD4416820A2D00EAF534 /* IASKPSSliderSpecifierViewCell.h in Headers */,
 				E401BD4516820A2D00EAF534 /* IASKPSTextFieldSpecifierViewCell.h in Headers */,
 				E401BD4716820A2D00EAF534 /* IASKSlider.h in Headers */,
@@ -381,6 +394,7 @@
 				E401BD4916820A2D00EAF534 /* IASKTextField.h in Headers */,
 				E401BD4B16820BBA00EAF534 /* IASKViewController.h in Headers */,
 				1AA106821916565D4D6221F9 /* IASKMultipleValueSelection.h in Headers */,
+				D953C2E51A77EA1E00E08E4A /* IAKTableViewCell.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -504,9 +518,11 @@
 				E4EDC59F16820D9500BD3CA9 /* IASKAppSettingsWebViewController.m in Sources */,
 				E4EDC5A016820D9500BD3CA9 /* IASKSettingsReader.m in Sources */,
 				E4EDC5A116820D9500BD3CA9 /* IASKSpecifier.m in Sources */,
+				D953C2E61A77EA1E00E08E4A /* IAKTableViewCell.m in Sources */,
 				E4EDC5A216820D9500BD3CA9 /* IASKSettingsStore.m in Sources */,
 				E4EDC5A316820D9500BD3CA9 /* IASKSettingsStoreUserDefaults.m in Sources */,
 				E4EDC5A416820D9500BD3CA9 /* IASKSettingsStoreFile.m in Sources */,
+				D953C2E21A77EA1400E08E4A /* IASKPSTitleValueSpecifierViewCell.m in Sources */,
 				E4EDC5A516820D9500BD3CA9 /* IASKPSSliderSpecifierViewCell.m in Sources */,
 				E4EDC5A616820D9500BD3CA9 /* IASKPSTextFieldSpecifierViewCell.m in Sources */,
 				E4EDC5A816820D9500BD3CA9 /* IASKSlider.m in Sources */,

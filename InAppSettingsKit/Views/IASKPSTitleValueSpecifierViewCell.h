@@ -1,8 +1,8 @@
 //
-//  IASKPSTextFieldSpecifierViewCell.h
+//  IASKPSTitleValueSpecifierViewCell.h
 //  http://www.inappsettingskit.com
 //
-//  Copyright (c) 2009:
+//  Copyright (c) 2010:
 //  Luc Vandal, Edovia Inc., http://www.edovia.com
 //  Ortwin Gentz, FutureTap GmbH, http://www.futuretap.com
 //  All rights reserved.
@@ -18,10 +18,7 @@
 
 #import "IAKTableViewCell.h"
 
-@class IASKTextField;
 
-@interface IASKPSTextFieldSpecifierViewCell : IAKTableViewCell
-
-@property (nonatomic, strong) IASKTextField *textField;
+@interface IASKPSTitleValueSpecifierViewCell : IAKTableViewCell
 
 @end
