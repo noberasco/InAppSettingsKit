@@ -9,7 +9,7 @@
 #import "IAKTableViewCell.h"
 
 #define IOS_VERSION [[[UIDevice currentDevice] systemVersion] floatValue]
-#define kSelectedButtonColor [UIColor colorWithRed:26.0/255.0 green:124.0/255.0 blue:218.0/255.0 alpha:1.0]
+#define kSelectedButtonColor [UIColor colorWithRed:(CGFloat)(26.0/255.0) green:(CGFloat)(124.0/255.0) blue:(CGFloat)(218.0/255.0) alpha:(CGFloat)1.0]
 
 @implementation IAKTableViewCell
 

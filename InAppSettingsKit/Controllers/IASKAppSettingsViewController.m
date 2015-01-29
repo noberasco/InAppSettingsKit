@@ -491,7 +491,7 @@ CGRect IASKCGRectSwap(CGRect rect);
 
 - (UITableViewCell*)tableView:(UITableView *)tableView cellForSpecifier:(IASKSpecifier*)specifier {
 
-	NSString *identifier = [NSString stringWithFormat:@"%@-%lu-%d", specifier.type, specifier.textAlignment, !!specifier.subtitle.length];
+	NSString *identifier = [NSString stringWithFormat:@"%@-%lu-%d", specifier.type, (unsigned long)specifier.textAlignment, !!specifier.subtitle.length];
 	UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:identifier];
 	if (cell) {
 		return cell;
