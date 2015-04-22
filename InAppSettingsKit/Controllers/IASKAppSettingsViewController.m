@@ -145,14 +145,14 @@ CGRect IASKCGRectSwap(CGRect rect);
     return self;
 }
 
-- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
-{
-    if (!nibNameOrNil) {
-        return [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
-    }
-    NSLog (@"%@ is now deprecated, we are moving away from nibs.", NSStringFromSelector(_cmd));
-    return [self initWithStyle:UITableViewStyleGrouped];
-}
+//- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
+//{
+//    if (!nibNameOrNil) {
+//        return [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
+//    }
+//    NSLog (@"%@ is now deprecated, we are moving away from nibs.", NSStringFromSelector(_cmd));
+//    return [self initWithStyle:UITableViewStyleGrouped];
+//}
 
 - (void)viewDidLoad {
     [super viewDidLoad];
