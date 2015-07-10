@@ -112,8 +112,9 @@
 
 - (CGFloat)tableView:(UITableView*)tableView heightForHeaderInSection:(NSInteger)section {
     if ([self tableView:tableView viewForHeaderInSection:section] && [self.delegate respondsToSelector:@selector(settingsViewController:tableView:heightForHeaderForSection:)]) {
-        CGFloat result;
-        if ((result = [self.delegate settingsViewController:self tableView:tableView heightForHeaderForSection:section])) {
+        CGFloat result = [self.delegate settingsViewController:self tableView:tableView heightForHeaderForSection:section];
+        
+        if (result != 0) {
             return result;
         }
         
@@ -142,8 +143,9 @@
 
 - (CGFloat)tableView:(UITableView*)tableView heightForFooterInSection:(NSInteger)section {
     if ([self tableView:tableView viewForFooterInSection:section] && [self.delegate respondsToSelector:@selector(settingsViewController:tableView:heightForFooterForSection:)]) {
-        CGFloat result;
-        if ((result = [self.delegate settingsViewController:self tableView:tableView heightForFooterForSection:section])) {
+        CGFloat result = [self.delegate settingsViewController:self tableView:tableView heightForFooterForSection:section];
+        
+        if (result > 0) {
             return result;
         }
         
