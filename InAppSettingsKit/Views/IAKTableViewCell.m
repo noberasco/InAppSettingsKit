@@ -16,9 +16,9 @@
 - (id)initWithFrame:(CGRect)frame {
   self = [super initWithFrame:frame];
   
-  if (IOS_VERSION >= 7)
-    if (self != nil)
-      self.selectionStyle = UITableViewCellSelectionStyleBlue;
+  if (self != nil) {
+    self.selectionStyle = UITableViewCellSelectionStyleBlue;
+  }
   
   return self;
 }
@@ -26,9 +26,9 @@
 - (id)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier {
   self = [super initWithStyle:style reuseIdentifier:reuseIdentifier];
   
-  if (IOS_VERSION >= 7)
-    if (self != nil)
-      self.selectionStyle = UITableViewCellSelectionStyleBlue;
+  if (self != nil) {
+    self.selectionStyle = UITableViewCellSelectionStyleBlue;
+  }
   
   return self;
 }
@@ -36,10 +36,11 @@
 - (id)initWithCoder:(NSCoder *)aDecoder {
   self = [super initWithCoder:aDecoder];
   
-  if (IOS_VERSION >= 7)
-    if (self != nil)
-      if (self.selectionStyle == UITableViewCellSelectionStyleBlue)
-        self.selectionStyle = UITableViewCellSelectionStyleBlue;
+  if (self != nil) {
+    if (self.selectionStyle == UITableViewCellSelectionStyleBlue) {
+      self.selectionStyle = UITableViewCellSelectionStyleBlue;
+    }
+  }
   
   return self;
 }
@@ -47,24 +48,23 @@
 - (void)setSelectionStyle:(UITableViewCellSelectionStyle)selectionStyle {
   [super setSelectionStyle:selectionStyle];
   
-  if (IOS_VERSION >= 7)
-    switch (selectionStyle) {
-      case UITableViewCellSelectionStyleBlue: {
-        UIView *bgColorView = [[UIView alloc] init];
-        
-        bgColorView.backgroundColor     = kSelectedButtonColor;
-        bgColorView.layer.masksToBounds = YES;
-        
-        self.selectedBackgroundView = bgColorView;
-        
-        break;
-      }
-      default: {
-        self.selectedBackgroundView = nil;
-        
-        break;
-      }
+  switch (selectionStyle) {
+    case UITableViewCellSelectionStyleBlue: {
+      UIView *bgColorView = [[UIView alloc] init];
+      
+      bgColorView.backgroundColor     = kSelectedButtonColor;
+      bgColorView.layer.masksToBounds = YES;
+      
+      self.selectedBackgroundView = bgColorView;
+      
+      break;
     }
+    default: {
+      self.selectedBackgroundView = nil;
+      
+      break;
+    }
+  }
 }
 
 @end
