@@ -412,7 +412,8 @@ CGRect IASKCGRectSwap(CGRect rect);
 								  UIContentSizeCategoryMedium: @(44),
 								  UIContentSizeCategoryLarge: @(44),
 								  UIContentSizeCategoryExtraLarge: @(47)};
-	 return (CGFloat)[rowHeights[UIApplication.sharedApplication.preferredContentSizeCategory] doubleValue] ? : 51;
+   CGFloat height = (CGFloat)[rowHeights[UIApplication.sharedApplication.preferredContentSizeCategory] doubleValue];
+	 return (height != 0) ? height : 51;
 	);
 	return 44;
 }
