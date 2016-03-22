@@ -74,7 +74,11 @@
 @interface IASKAppSettingsViewController : UITableViewController <IASKViewController, UITextFieldDelegate, MFMailComposeViewControllerDelegate> {
     IASKSettingsReader		*_settingsReader;
     NSArray *_selections;
+#if __has_feature(objc_arc)
     __weak UIViewController *_currentChildViewController;
+#else
+    UIViewController *_currentChildViewController;
+#endif
 }
 
 @property (nonatomic, assign) IBOutlet id delegate;
