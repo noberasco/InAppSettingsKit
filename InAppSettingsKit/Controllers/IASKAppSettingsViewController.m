@@ -201,10 +201,6 @@ CGRect IASKCGRectSwap(CGRect rect);
 	[super viewWillAppear:animated];
 }
 
-- (CGSize)contentSizeForViewInPopover {
-    return [[self view] sizeThatFits:CGSizeMake(320, 2000)];
-}
-
 - (void)viewDidAppear:(BOOL)animated {
 	[super viewDidAppear:animated];
 
@@ -482,10 +478,14 @@ CGRect IASKCGRectSwap(CGRect rect);
     }
     NSString *title;
     if ((title = [self tableView:tableView titleForFooterInSection:section])) {
-        CGSize size = [title sizeWithFont:[UIFont boldSystemFontOfSize:[UIFont labelFontSize]]
-                        constrainedToSize:CGSizeMake(tableView.frame.size.width - 2*kIASKHorizontalPaddingGroupTitles, INFINITY)
-                            lineBreakMode:NSLineBreakByWordWrapping];
-        return size.height+kIASKVerticalPaddingGroupTitles;
+        UIFont *font = [UIFont boldSystemFontOfSize:[UIFont labelFontSize]];
+        NSMutableParagraphStyle *paraStyle = [[NSParagraphStyle defaultParagraphStyle] mutableCopy];
+        paraStyle.lineBreakMode = NSLineBreakByWordWrapping;
+        CGRect  rect = [title boundingRectWithSize:CGSizeMake(tableView.frame.size.width - 2*kIASKHorizontalPaddingGroupTitles, INFINITY)
+                                           options:NSStringDrawingUsesLineFragmentOrigin
+                                        attributes:@{NSFontAttributeName:font,NSParagraphStyleAttributeName:paraStyle}
+                                           context:nil];
+        return rect.size.height+kIASKVerticalPaddingGroupTitles;
     }
     return 0;
 }
